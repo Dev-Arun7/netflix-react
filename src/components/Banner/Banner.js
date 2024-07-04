@@ -4,7 +4,7 @@ import { API_KEY, imageUrl } from '../../constants/constants'
 import "./Banner.css"
 
 function Banner() {
-    const [movie, setMovie] = useState()
+    const [movie, setMovie] = useState([])
     useEffect(() => {
         axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}&language=en-US`).then((response) => {
             const randomIndex = Math.floor(Math.random() * 20);
